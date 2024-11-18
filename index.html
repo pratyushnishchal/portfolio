@@ -21,6 +21,7 @@
     <link href="css/style.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -29,6 +30,7 @@
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+        background-color: #080808;
     }
 
     .navbar {
@@ -101,7 +103,8 @@
     .projh1,
     .cerh1,
     .skillsh1,
-    .contacth1 {
+    .contacth1,
+    .exph2 {
         text-align: center;
         background-image: linear-gradient(#0fa0db 0 0);
         background-position: bottom center;
@@ -207,6 +210,82 @@
         color: #0fd9fc;
         transition: 0.9s;
     }
+
+    a:hover {
+        color: #fff !important;
+        text-decoration: none;
+    }
+
+    #experience {
+        padding: 50px 0;
+    }
+
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 100%;
+        background-color: #007bff;
+    }
+
+    .timeline-content {
+        padding-left: 40px;
+    }
+
+    .job-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .company-name {
+        font-size: 1.1rem;
+        color: white;
+    }
+
+    .employment-dates {
+        font-size: 1rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    ul li {
+        font-size: 1rem;
+        color: white;
+        margin: 5px 0;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        padding-left: 0;
+        padding-right: 40px;
+    }
+
+    .timeline-item:nth-child(even)::before {
+        left: auto;
+        right: 0;
+        background-color: #28a745;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        text-align: right;
+    }
 </style>
 
 <body>
@@ -236,8 +315,9 @@
                         <a class="nav-link " href="#skills">Skills</a>
                     </li>
                     <li class="nav-item navhome">
-                        <a class="nav-link " href="#contact">Contact Info</a>
+                        <a class="nav-link " href="#experience">Experience</a>
                     </li>
+                    
                     <li class="nav-item navhome">
                         <a class="nav-link" href="./PratyushNishchal_Resume.pdf" target="_blank">Resume</a>
                     </li>
@@ -340,7 +420,8 @@
                         <span class="badge rounded-pill bg-success">MYSQL</span>
                         <p class="text-justify projp" style="width: 18rem;">Built an ecommerce webApplication using
                             <b>Servlet, JSP,JDBC and
-                                Bootstrap, CSS</b>.</p>
+                                Bootstrap, CSS</b>.
+                        </p>
 
                     </center>
                 </div>
@@ -390,6 +471,24 @@
                                 MYSQL, JSP, Bootstrap, CSS</b>.</p>
                     </center>
                 </div>
+                <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6 pl-sm-2 pl-md-2 proj">
+                    <center>
+                        <a href="https://github.com/pratyushnishchal/billing-application-backend" target="_blank"><img
+                                style="width: 18rem;height: 18rem;" src="https://img.freepik.com/free-vector/electronic-documentation-man-with-registration-checking-repository-log-online-approval-screen-form-validation-page-expense-chronicles-vector-isolated-concept-metaphor-illustration_335657-4323.jpg?t=st=1731929285~exp=1731932885~hmac=e85fd5e3091e2003934a713a135b366633db330aa250c4282720f7ba3d71100f&w=740" /></a>
+                        <a href="https://github.com/pratyushnishchal/billing-application-backend" target="_blank"
+                            class="projtitle">
+                            <h4 style="padding-top: 10px;">Billing Application</h4>
+                        </a>
+                        <span class="badge rounded-pill bg-success">Spring Boot</span>
+                        <span class="badge rounded-pill bg-danger">Hibernate</span>
+                        <span class="badge rounded-pill bg-secondary">MYSQL</span>
+                        <span class="badge rounded-pill bg-warning">Tailwind CSS</span>
+                        <span class="badge rounded-pill bg-secondary">React JS</span>
+                        <p class="text-justify projp" style="width: 18rem;">Built a Billing Application using <b>Spring
+                                Boot, Hibernate and
+                                MYSQL,Tailwind CSS,React JS</b>.</p>
+                    </center>
+                </div>
             </div>
             <!-- <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12 proj">
@@ -432,91 +531,84 @@
 
     </section>
 
-    <section id="certificates">
-        <div class="backcolor" style="padding-top: 50px; padding-bottom: 50px;">
-            <div class="container-fluid">
-                <div class="row">
-
-                    <h1 class="cerh1">Courses & Certificates</h1>
-                    <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6">
-                        <center>
-                            <a href="#certificates" target="_blank"><a href="./MYSQL.pdf" target="_blank"><img
-                                        style="width: 18rem;height: 18rem;" src="./img/MYSQL-1.png" /></a></a>
-                            <h4 style="color: rgba(255, 255, 255, 0.868); padding-top: 10px;">MYSQL - Udemy</h4>
-                            <!-- <a href="LUPY0420A0413.pdf" download="python certificate">
-                        <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-download"></i>  Download Certificate</button>
-                      </a> -->
-                        </center>
+    <section id="certificates" style="background-color: #364c9c; padding: 50px 0;">
+        <div class="container">
+            <h1 class="text-center" style="color: #fff; font-size: 2.5rem; margin-bottom: 30px;">Courses & Certificates
+            </h1>
+            <div class="row">
+                <!-- Certificate 1 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div style="background: #2a2a2a; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #fff; display: flex; align-items: center; justify-content: space-between;">
+                            MYSQL - Udemy
+                            <a href="./MYSQL.pdf" target="_blank" download style="color: #ffc107;">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </h4>
                     </div>
-                    <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6">
-                        <center>
-                            <a href="#certificates" target="_blank"><a
-                                    href="./Web Development Training - Certificate of Completion (2).pdf"
-                                    target="_blank"><img style="width: 18rem;height: 18rem;"
-                                        src="./img/Web Development Training - Certificate of Completion (2)-1.png" /></a></a>
-                            <h4 style="color: rgba(255, 255, 255, 0.868);; padding-top: 10px;">Web Development -
-                                Internshala</h4>
-                            <!-- <a href="Web Development Training - Certificate of Completion (2).pdf" download="webdevelopment certificate">
-                          <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-download"></i>  Download Certificate</button>                   
-                        </a> -->
-                        </center>
+                </div>
+                <!-- Certificate 2 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div style="background: #2a2a2a; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #fff; display: flex; align-items: center; justify-content: space-between;">
+                            Web Development - Internshala
+                            <a href="./Web Development Training - Certificate of Completion (2).pdf" target="_blank"
+                                download style="color: #ffc107;">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </h4>
                     </div>
-                    <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6">
-                        <center>
-                            <a href="#certificates" target="_blank"><a
-                                    href="./UC-df0d34b1-1c19-42bb-a614-7a0811aa182d.pdf" target="_blank"><img
-                                        style="width: 18rem;height: 18rem;"
-                                        src="./img/UC-df0d34b1-1c19-42bb-a614-7a0811aa182d-1.png" /></a></a>
-                            <h4 style="color: rgba(255, 255, 255, 0.868);; padding-top: 10px;">Computer Vision - Udemy
-                            </h4>
-                            <!-- <a href="UC-df0d34b1-1c19-42bb-a614-7a0811aa182d.pdf" download="cv certificate">
-                          <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-download"></i>  Download Certificate</button>                   
-                        </a> -->
-                        </center>
+                </div>
+                <!-- Certificate 3 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div style="background: #2a2a2a; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #fff; display: flex; align-items: center; justify-content: space-between;">
+                            Computer Vision - Udemy
+                            <a href="./UC-df0d34b1-1c19-42bb-a614-7a0811aa182d.pdf" target="_blank" download
+                                style="color: #ffc107;">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </h4>
                     </div>
-
-                    <br>
-
-                    <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6">
-                        <center>
-                            <a href="#certificates" target="_blank"><a href="asset/ML.pdf" target="_blank"><img
-                                        style="width: 18rem;height: 18rem;" src="./img/ML-1.png" /></a></a>
-                            <h4 style="color: rgba(255, 255, 255, 0.868);; padding-top: 10px;">Machine Learning - Udemy
-                            </h4>
-                            <!-- <a href="ML.pdf" download="ML certificate">
-                        <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-download"></i>  Download Certificate</button>                     
-                       </a> -->
-                        </center>
+                </div>
+                <!-- Certificate 4 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div style="background: #2a2a2a; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #fff; display: flex; align-items: center; justify-content: space-between;">
+                            Machine Learning - Udemy
+                            <a href="./ML.pdf" target="_blank" download style="color: #ffc107;">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </h4>
                     </div>
-                    <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6">
-                        <center>
-                            <a href="#certificates" target="_blank"><a
-                                    href="https://www.coursera.org/account/accomplishments/verify/YSMBP5FN8HZA"
-                                    target="_blank"><img style="width: 18rem;height: 18rem;"
-                                        src="./img/CERTIFICATE_LANDING_PAGE~YSMBP5FN8HZA.jpeg" /></a></a>
-                            <h4 style="color: rgba(255, 255, 255, 0.868);; padding-top: 10px;">COVID19 Data Analysis
-                                Using Python</h4>
-                            <!-- <a href="https://www.coursera.org/account/accomplishments/verify/YSMBP5FN8HZA" target="_blank">
-                          <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-download"></i>  Download Certificate</button>                   
-                        </a> -->
-                        </center>
+                </div>
+                <!-- Certificate 5 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div style="background: #2a2a2a; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #fff; display: flex; align-items: center; justify-content: space-between;">
+                            COVID19 Data Analysis Using Python
+                            <a href="https://www.coursera.org/account/accomplishments/verify/YSMBP5FN8HZA"
+                                target="_blank" style="color: #ffc107;">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </h4>
                     </div>
-                    <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6">
-                        <center>
-                            <a href="#certificates" target="_blank"><a href="/asset/javafullstack.pdf"
-                                    target="_blank"><img style="width: 18rem;height: 18rem;"
-                                        src="./img/Pratyush Nishchal-1.png" /></a></a>
-                            <h4 style="color: rgba(255, 255, 255, 0.868);; padding-top: 10px;">Full Stack Java Developer
-                                Certification - Excelr</h4>
-                            <!-- <a href="https://www.coursera.org/account/accomplishments/verify/YSMBP5FN8HZA" target="_blank">
-                          <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-download"></i>  Download Certificate</button>                   
-                        </a> -->
-                        </center>
+                </div>
+                <!-- Certificate 6 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div style="background: #2a2a2a; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #fff; display: flex; align-items: center; justify-content: space-between;">
+                            Full Stack Java Developer - Excelr
+                            <a href="/asset/javafullstack.pdf" target="_blank" download style="color: #ffc107;">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="skills">
         <h1 class="skillsh1">Skills</h1>
         <div class="container">
@@ -543,54 +635,85 @@
             </div>
         </div>
     </section>
-    <section id="contact">
-        <div class="backcolor" style="padding-top: 50px; padding-bottom: 50px;">
-            <h1 class="contacth1" style="color:white;">Contact Info</h1>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12 cont">
-                        <center>
-                            <a href="https://www.linkedin.com/in/pratyush-nishchal-a0ba21190/" target="_blank"><img
-                                    style="width: 15rem;height: 15rem;" src="./img/linkedin.png" /></a>
-                            <br>
-                            <a style="font-size: 22px; color: black;text-decoration: none;"
-                                href="https://www.linkedin.com/in/pratyush-nishchal-a0ba21190/">See Profile</a>
-                        </center>
-                        <br>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 cont">
-                        <center>
-                            <a href="https://github.com/pratyushnishchal" target="_blank"><img
-                                    style="width: 15rem;height: 15rem;" src="./img/github.png" /></a>
-                            <br>
-                            <a style="font-size: 22px;color: black; text-decoration: none;"
-                                href="https://github.com/pratyushnishchal">See Profile</a>
-                        </center>
-                        <br>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 cont">
-                        <center>
-                            <a href="mailto:pratyushnishchal@gmail.com"><img style="width: 15rem;height: 15rem;"
-                                    src="./img/gmail.jpg" /></a>
-                            <br>
-                            <a style="font-size: 22px; color: black; text-decoration: none;"
-                                href="mailto:pratyushnishchal@gmail.com">Send Mail</a>
-                        </center>
-                        <br>
-                    </div>
+    <section id="experience" class="container">
+        <h1 class="text-center exph2" style="color: white;">Experience</h1>
+
+        <div class="timeline">
+            <!-- Experience Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 class="job-title">Java Developer Intern</h3>
+                    <p class="company-name">AI Variant</p>
+                    <p class="employment-dates">July 2024 – October 2024</p>
+                    <ul>
+                        <li>Developed responsive user interfaces with React JS</li>
+                        <li>Collaborated with backend teams for seamless API integration.</li>
+                        <li>Utilized Git for version control and Webpack for bundling.</li>
+                        <li>Deployed the web application using Vercel and Railway</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <!-- <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 class="job-title">Junior Web Developer</h3>
+                    <p class="company-name">ABC Corp, San Francisco, CA</p>
+                    <p class="employment-dates">June 2020 – February 2022</p>
+                    <ul>
+                        <li>Built static websites with HTML, CSS, and JavaScript.</li>
+                        <li>Improved site performance and optimized for SEO.</li>
+                        <li>Collaborated with designers to ensure responsive design.</li>
+                    </ul>
+                </div>
+            </div> -->
+
+            <!-- Experience Item 3 -->
+            <!-- <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 class="job-title">Intern - Web Development</h3>
+                    <p class="company-name">Tech Innovators, Austin, TX</p>
+                    <p class="employment-dates">January 2020 – May 2020</p>
+                    <ul>
+                        <li>Assisted in developing web applications using Angular.</li>
+                        <li>Worked closely with senior developers to debug issues.</li>
+                        <li>Learned version control using Git and participated in team meetings.</li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-light text-center text-lg-start">
+        <div class="container py-4">
+            <!-- Social Media Links -->
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <a href="https://www.linkedin.com/in/pratyush-nishchal-a0ba21190/" target="_blank"
+                        class="text-light mx-3">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="https://github.com/pratyushnishchal" target="_blank" class="text-light mx-3">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="mailto:pratyushnishchal@gmail.com" class="text-light mx-3">
+                        <i class="fas fa-envelope fa-2x"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- footer -->
-    <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
+        <!-- Copyright Section -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2023 Copyright:
-            <a class="text-dark" href="index.html">pratyushnishchal.com</a>
+            <a class="text-light" href="index.html">pratyushnishchal.com</a>
         </div>
-        <!-- Copyright -->
     </footer>
+
 </body>
 
 </html>
