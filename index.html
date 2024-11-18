@@ -140,7 +140,7 @@
 
     #publications,
     #skills {
-        background-color: black;
+        background-color: #080808;
 
         color: white;
         padding-top: 50px;
@@ -286,6 +286,7 @@
     .timeline-item:nth-child(even) .timeline-content {
         text-align: right;
     }
+
 </style>
 
 <body>
@@ -367,7 +368,7 @@
     </div>
 
     <section id="about">
-        <div class="backcolor" style="padding-top: 50px; padding-bottom: 50px;">
+        <div class="backcolor" style="padding-top: 50px; padding-bottom: 50px; background-color: #080808;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -396,7 +397,90 @@
         </div>
         </div>
     </section>
-    <section id="publications">
+    <section id="publications" class="py-5" style="background-color: #080808;">
+        <div class="container">
+            <h1 class="text-center mb-4 fw-bold projh1">Projects</h1>
+            <div class="row g-4">
+                <!-- Project Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-white bg-dark shadow-sm h-100 border-0">
+                        <a href="https://github.com/pratyushnishchal/E-Commerce-Webapplication" target="_blank">
+                            <img src="./img/ecommerce.png" class="card-img-top" alt="E-Commerce WebApplication" height="250px">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                <a href="https://github.com/pratyushnishchal/E-Commerce-Webapplication" target="_blank" class="text-decoration-none text-white fw-bold">
+                                    E-Commerce WebApplication
+                                </a>
+                            </h5>
+                            <p class="text-white-50 small text-center">Servlet, JSP, JDBC, Bootstrap, CSS, MYSQL</p>
+                            <p class="card-text text-center">Built an e-commerce web application using 
+                                <b>Servlet, JSP, JDBC, Bootstrap, and CSS</b>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-white bg-dark shadow-sm h-100 border-0">
+                        <a href="https://github.com/pratyushnishchal/portfolio" target="_blank">
+                            <img src="./img/hq720.jpg" class="card-img-top" alt="Portfolio Website" height="250px">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                <a href="https://github.com/pratyushnishchal/portfolio" target="_blank" class="text-decoration-none text-white fw-bold">
+                                    Portfolio Website
+                                </a>
+                            </h5>
+                            <p class="text-white-50 small text-center">HTML, CSS, Bootstrap</p>
+                            <p class="card-text text-center">Built a personal portfolio website using <b>HTML, CSS, and Bootstrap</b>.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-white bg-dark shadow-sm h-100 border-0">
+                        <a href="https://github.com/pratyushnishchal/BlogNest-Web-Application" target="_blank">
+                            <img src="./img/website-blog.jpg" class="card-img-top" alt="Blog Application" height="250px">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                <a href="https://github.com/pratyushnishchal/BlogNest-Web-Application" target="_blank" class="text-decoration-none text-white fw-bold">
+                                    Blog Application
+                                </a>
+                            </h5>
+                            <p class="text-white-50 small text-center">Spring MVC, Hibernate, MYSQL, JSP, Bootstrap, CSS</p>
+                            <p class="card-text text-center">Developed a blog application using <b>Spring MVC, Hibernate, and MYSQL</b>, along with <b>JSP, Bootstrap, and CSS</b>.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-white bg-dark shadow-sm h-100 border-0">
+                        <a href="https://github.com/pratyushnishchal/billing-application-backend" target="_blank">
+                            <img src="https://img.freepik.com/free-vector/electronic-documentation-man-with-registration-checking-repository-log-online-approval-screen-form-validation-page-expense-chronicles-vector-isolated-concept-metaphor-illustration_335657-4323.jpg?t=st=1731929285~exp=1731932885~hmac=e85fd5e3091e2003934a713a135b366633db330aa250c4282720f7ba3d71100f&w=740"
+                                class="card-img-top" alt="Billing Application" height="250px">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                <a href="https://github.com/pratyushnishchal/billing-application-backend" target="_blank" class="text-decoration-none text-white fw-bold">
+                                    Billing Application
+                                </a>
+                            </h5>
+                            <p class="text-white-50 small text-center">Spring Boot, Hibernate, MYSQL, Tailwind CSS, React JS</p>
+                            <p class="card-text text-center">Created a billing application using <b>Spring Boot, Hibernate, MYSQL</b>, and front-end technologies like <b>Tailwind CSS and React JS</b>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- <section id="publications">
         <br>
         <h1 class="projh1">Projects</h1>
         <br>
@@ -439,7 +523,7 @@
                                 and bootstrap</b>.
                         </p>
                     </center>
-                </div>
+                </div> -->
                 <!-- <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6 pl-sm-2 pl-md-2 proj">
                     <center>
                         <a href="https://github.com/pratyushnishchal/user-management-system" target="_blank"><img
@@ -453,7 +537,7 @@
                             delete the user</p>
                     </center>
                 </div> -->
-                <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6 pl-sm-2 pl-md-2 proj">
+                <!-- <div class="col-md-4 col-xs-12 col-lg-4 col-sm-6 pl-sm-2 pl-md-2 proj">
                     <center>
                         <a href="https://github.com/pratyushnishchal/BlogNest-Web-Application" target="_blank"><img
                                 style="width: 18rem;height: 18rem;" src="./img/website-blog.jpg" /></a>
@@ -489,7 +573,7 @@
                                 MYSQL,Tailwind CSS,React JS</b>.</p>
                     </center>
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12 proj">
                     <center>
@@ -526,14 +610,14 @@
                 </div>
              </div> -->
 
-
+<!-- 
         </div>
 
-    </section>
+    </section> -->
 
-    <section id="certificates" style="background-color: #364c9c; padding: 50px 0;">
+    <section id="certificates" style="background-color: #080808; padding: 50px 0;">
         <div class="container">
-            <h1 class="text-center" style="color: #fff; font-size: 2.5rem; margin-bottom: 30px;">Courses & Certificates
+            <h1 class="text-center cerh1" style="color: #fff; font-size: 2.5rem; margin-bottom: 30px;">Courses & Certificates
             </h1>
             <div class="row">
                 <!-- Certificate 1 -->
